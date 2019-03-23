@@ -22,17 +22,17 @@ public class PlayerMovement : MonoBehaviour
 
     void MoveOnTheGround()
     {
-        _moveDirection = new Vector3(Input.GetAxis(Axis.HORIZONTAL), 0f,
-            Input.GetAxis(Axis.VERTICAL));
+        _moveDirection = new Vector3(Input.GetAxis(Axis.Horizontal), 0f,
+            Input.GetAxis(Axis.Vertical));
         _moveDirection = transform.TransformDirection(_moveDirection);
-        _moveDirection *= speed * DeltaTime;
+        _moveDirection *= speed * TimeUtils.DeltaTime;
     }
 
     void ApplyGravity()
     {
-        _verticalVelocity -= _gravity * DeltaTime;
+        _verticalVelocity -= _gravity * TimeUtils.DeltaTime;
         CheckIfPlayerWantsToJump();
-        _moveDirection.y = _verticalVelocity * DeltaTime;
+        _moveDirection.y = _verticalVelocity * TimeUtils.DeltaTime;
     }
 
     void CheckIfPlayerWantsToJump()
@@ -40,14 +40,6 @@ public class PlayerMovement : MonoBehaviour
         if (_characterController.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             _verticalVelocity = jumpForce;
-        }
-    }
-
-    private float DeltaTime
-    {
-        get
-        {
-            return Time.deltaTime;
         }
     }
 
