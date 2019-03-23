@@ -16,7 +16,7 @@ public class MouseLook : MonoBehaviour
     {
         _currentMouseLook = new Vector2(Input.GetAxis(MouseAxis.MouseY), Input.GetAxis(MouseAxis.MouseX));
         _lookAngles.x += _currentMouseLook.x * _sensivity * (_invert ? 1f : -1f);
-        _lookAngles.y += _currentMouseLook.x * _sensivity;
+        _lookAngles.y += _currentMouseLook.y * _sensivity;
         _lookAngles.x = Mathf.Clamp(_lookAngles.x, _defaultLookLimits.x, _defaultLookLimits.y);
 
         _lookRoot.localRotation = Quaternion.Euler(_lookAngles.x, 0f, 0f);
