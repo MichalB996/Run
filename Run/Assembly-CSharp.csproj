@@ -69,6 +69,8 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Utils\TagUtils.cs" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\SSAA.shader" />
     <None Include="Assets\Shaders\Standard\_DepthOfField\DepthOfField34.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset3.shader" />
